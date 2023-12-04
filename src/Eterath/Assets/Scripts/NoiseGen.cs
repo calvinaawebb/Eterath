@@ -39,8 +39,11 @@ public static class NoiseGen
                 double noiseHeight = 0f;
                 for (int i = 0; i < octaves; i++) 
                 {
-                    double sampleX = (x-halfWidth) / scale * frequency + octavesOffsets[i].x;
-                    double sampleZ = (z-halfHeight) / scale * frequency + octavesOffsets[i].y;
+                    //double sampleX = (x-halfWidth) / scale * frequency + octavesOffsets[i].x;
+                    //double sampleZ = (z-halfHeight) / scale * frequency + octavesOffsets[i].y;
+
+                    double sampleX = ((x-halfWidth) / scale + octavesOffsets[i].x) * frequency;
+                    double sampleZ = ((z-halfHeight) / scale + octavesOffsets[i].y) * frequency;
 
                     double perlinValue = noise2d.Evaluate(sampleX, sampleZ) * 2 - 1;
                     //double perlinValue = (double)Mathf.PerlinNoise((float)sampleX, (float)sampleZ) * 2 - 1;

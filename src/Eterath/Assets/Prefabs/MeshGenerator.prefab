@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 7420439933866892142}
   - component: {fileID: 7420439933866892143}
   - component: {fileID: 7420439933866892136}
+  - component: {fileID: -1661275180635774758}
   m_Layer: 0
   m_Name: MeshGenerator
   m_TagString: Untagged
@@ -99,22 +100,37 @@ MonoBehaviour:
   biome: 
   xbound: 255
   zbound: 255
-  y: -31.849690984596744
+  y: 13.3174471299253
   color: {fileID: 2100000, guid: 84dfd95fa18d78d43b6981d84655efa9, type: 2}
-  amplitude: 30
+  amplitude: -21
   frequency: 4
-  amplitude_val: 30
+  amplitude_val: -21
   frequency_val: 4
-  N_OCTAVES: 5
-  scale: 112.04
+  N_OCTAVES: 10
+  scale: 100.2
   sampleX: 0
   sampleZ: 0
   xSize: 255
   zSize: 255
-  octaves: 1
-  persistance: 0.4000000059604645
+  octaves: 10
+  persistance: 0.30000001192092896
   lacunarity: 2
   seed: 1
   offset: {x: 0, y: 0}
   autoUpdate: 1
   regions: []
+  colide: {fileID: -1661275180635774758}
+--- !u!64 &-1661275180635774758
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7420439933866892141}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 0}

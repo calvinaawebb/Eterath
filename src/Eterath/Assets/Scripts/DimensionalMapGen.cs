@@ -12,8 +12,8 @@ public class DimensionalMapGen : MonoBehaviour
     int[] triangles;
 
     public string biome;
-    public int xbound = 100;
-    public int zbound = 100;
+    public int xbound = 255;
+    public int zbound = 255;
     public double y;
     public Material color;
 
@@ -43,12 +43,23 @@ public class DimensionalMapGen : MonoBehaviour
 
     public double[,] noiseMap;
 
+    public MeshCollider colide;
+
+    public void Start() 
+    {
+        colide = GetComponent<MeshCollider>();
+        colide.sharedMesh = mesh;
+    }
+
     // Start is called before the first frame update
     public void GenDMap()
     {
         mesh = new Mesh();
         GetComponent<MeshFilter>().mesh = mesh;
         GetComponent<MeshRenderer>().material = color;
+
+        colide = GetComponent<MeshCollider>();
+        colide.sharedMesh = mesh;
 
         xSize = xbound;
         zSize = zbound;
@@ -119,6 +130,8 @@ public class DimensionalMapGen : MonoBehaviour
         mesh.triangles = triangles;
 
         mesh.RecalculateNormals();
+
+        //colide.sharedMesh = mesh;
 
         if (scale <= 0)
         {
