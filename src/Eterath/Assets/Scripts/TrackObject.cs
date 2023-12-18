@@ -26,13 +26,15 @@ public class TrackObject : MonoBehaviour
         originalRot.y += Input.GetAxis("Mouse X")*3;
         direct = new Vector3(transform.forward.x, 0 ,transform.forward.z);
         m_Rigidbody.AddForce(direct * m_Thrust * Input.GetAxis("Vertical"));
-        if (Input.GetKeyDown("space"))
+        if (Input.GetAxis("Vertical") != 0)
         {
             playerAnimator.SetBool("walking", true);
+            Debug.Log("walking");
         }
         else 
         {
             playerAnimator.SetBool("walking", false);
+            Debug.Log("not walking");
         }
     }
 }
