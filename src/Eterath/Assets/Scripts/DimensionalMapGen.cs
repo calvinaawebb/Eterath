@@ -7,7 +7,7 @@ public class DimensionalMapGen : MonoBehaviour
 {
     Mesh mesh;
 
-    Vector3[] vertices;
+    public Vector3[] vertices;
     Vector3 origin;
     int[] triangles;
 

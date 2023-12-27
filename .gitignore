@@ -72,9 +72,5 @@ crashlytics-build.properties
 /[Aa]ssets/[Ss]treamingAssets/aa/*
 
 # Miccilaneous
-*.fbx
-*.zip
-*.7z
-*.dylib
 Library/
 Temp/
