@@ -34,6 +34,7 @@ public class PlayerController : MonoBehaviour
     {
         // Initalization
         turnSpeed = 0.75f; //- (Mathf.Abs((Input.GetAxis("Vertical") + Input.GetAxis("Horizontal"))/2)/20);
+        turnSpeed *= Time.deltaTime*303.1222f;
         Cursor.lockState = CursorLockMode.Locked;
 
         // Setting position and rotation of camera object.
@@ -46,7 +47,8 @@ public class PlayerController : MonoBehaviour
 
         // Set up easing so that when player presses a movement button they dont immediately start at max speed. Bascially acceleration/easing implementation.
         //Debug.Log("Speed Modifier: " + speedMod);
-        if(w && speedMod <= 1 || a && speedMod <= 1 || s && speedMod <= 1 || d && speedMod <= 1) 
+        //speedMod *= Time.deltaTime;
+        if (w && speedMod <= 1 || a && speedMod <= 1 || s && speedMod <= 1 || d && speedMod <= 1) 
         {
             Debug.Log(w);
             speedMod += 0.005f;
@@ -186,69 +188,68 @@ public class PlayerController : MonoBehaviour
         if (Input.GetAxis("Vertical") != 0 || Input.GetAxis("Horizontal") != 0)
         {
             playerAnimator.SetBool("walking", true);
-            Debug.Log("walking");
         }
         else 
         {
             playerAnimator.SetBool("walking", false);
-            Debug.Log("not walking");
         }
 
         // Defining forward and back/side to side movement of player.
         if (w) 
         {
             //player.transform.eulerAngles = new Vector3(0, originalRot.y + 180f, 0);
-            direct = new Vector3(playerSkeleton.transform.forward.x*speed*speedMod, 0 ,playerSkeleton.transform.forward.z*speed*speedMod);
+            direct = new Vector3(playerSkeleton.transform.forward.x*speed*speedMod*Time.deltaTime, 0 ,playerSkeleton.transform.forward.z*speed*speedMod*Time.deltaTime);
             player.transform.position += direct;
+            //Debug.Log("Time: " + Time.deltaTime);
         } 
         else if(s) 
         {
             //player.transform.eulerAngles = new Vector3(0, originalRot.y + 180f, 0);
-            direct = new Vector3(playerSkeleton.transform.forward.x*speed*speedMod, 0 ,playerSkeleton.transform.forward.z*speed*speedMod);
+            direct = new Vector3(playerSkeleton.transform.forward.x*speed*speedMod*Time.deltaTime, 0 ,playerSkeleton.transform.forward.z*speed*speedMod*Time.deltaTime);
             player.transform.position += direct;
         }
         else if (d) 
         {
             //player.transform.eulerAngles = new Vector3(0, originalRot.y + 180f, 0);
-            direct = new Vector3(playerSkeleton.transform.forward.x*speed*speedMod, 0 ,playerSkeleton.transform.forward.z*speed*speedMod);
+            direct = new Vector3(playerSkeleton.transform.forward.x*speed*speedMod*Time.deltaTime, 0 ,playerSkeleton.transform.forward.z*speed*speedMod*Time.deltaTime);
             player.transform.position += direct;
         } 
         else if(a) 
         {
             //player.transform.eulerAngles = new Vector3(0, originalRot.y + 180f, 0);
-            direct = new Vector3(playerSkeleton.transform.forward.x*speed*speedMod, 0 ,playerSkeleton.transform.forward.z*speed*speedMod);
+            direct = new Vector3(playerSkeleton.transform.forward.x*speed*speedMod*Time.deltaTime, 0 ,playerSkeleton.transform.forward.z*speed*speedMod*Time.deltaTime);
             player.transform.position += direct;
         }
         else if (w && a) 
         {
             //player.transform.eulerAngles = new Vector3(0, originalRot.y + 180f, 0);
-            direct = new Vector3(playerSkeleton.transform.forward.x*speed*speedMod, 0 ,playerSkeleton.transform.forward.z*speed*speedMod);
+            direct = new Vector3(playerSkeleton.transform.forward.x*speed*speedMod*Time.deltaTime, 0 ,playerSkeleton.transform.forward.z*speed*speedMod*Time.deltaTime);
             player.transform.position += direct;
-            direct = new Vector3(-playerSkeleton.transform.forward.x*speed*speedMod, 0 ,-playerSkeleton.transform.forward.z*speed*speedMod);
+            direct = new Vector3(-playerSkeleton.transform.forward.x*speed*speedMod*Time.deltaTime, 0 ,-playerSkeleton.transform.forward.z*speed*speedMod*Time.deltaTime);
             player.transform.position += direct;
         } 
         else if(w && d) 
         {
             //player.transform.eulerAngles = new Vector3(0, originalRot.y + 180f, 0);
-            direct = new Vector3(-playerSkeleton.transform.forward.x*speed*speedMod, 0 ,-playerSkeleton.transform.forward.z*speed*speedMod);
+            direct = new Vector3(-playerSkeleton.transform.forward.x*speed*speedMod*Time.deltaTime, 0 ,-playerSkeleton.transform.forward.z*speed*speedMod*Time.deltaTime);
             player.transform.position += direct;
-            direct = new Vector3(-playerSkeleton.transform.forward.x*speed*speedMod, 0 ,-playerSkeleton.transform.forward.z*speed*speedMod);
+            direct = new Vector3(-playerSkeleton.transform.forward.x*speed*speedMod*Time.deltaTime, 0 ,-playerSkeleton.transform.forward.z*speed*speedMod*Time.deltaTime);
             player.transform.position += direct;
         }
         else if (s && d) 
         {
             //player.transform.eulerAngles = new Vector3(0, originalRot.y + 180f, 0);
-            direct = new Vector3(playerSkeleton.transform.forward.x*speed*speedMod, 0 ,playerSkeleton.transform.forward.z*speed*speedMod);
+            direct = new Vector3(playerSkeleton.transform.forward.x*speed*speedMod*Time.deltaTime, 0 ,playerSkeleton.transform.forward.z*speed*speedMod*Time.deltaTime);
             player.transform.position += direct;
-            direct = new Vector3(-playerSkeleton.transform.forward.x*speed*speedMod, 0 ,-playerSkeleton.transform.forward.z*speed*speedMod);
+            direct = new Vector3(-playerSkeleton.transform.forward.x*speed*speedMod*Time.deltaTime, 0 ,-playerSkeleton.transform.forward.z*speed*speedMod*Time.deltaTime);
             player.transform.position += direct;
         } 
         else if(s && a) 
         {
             //player.transform.eulerAngles = new Vector3(0, originalRot.y + 180f, 0);
-            direct = new Vector3(-playerSkeleton.transform.forward.x*speed*speedMod, 0 ,-playerSkeleton.transform.forward.z*speed*speedMod);
+            direct = new Vector3(-playerSkeleton.transform.forward.x*speed*speedMod*Time.deltaTime, 0 ,-playerSkeleton.transform.forward.z*speed*speedMod*Time.deltaTime);
             player.transform.position += direct;
-            direct = new Vector3(-playerSkeleton.transform.forward.x*speed*speedMod, 0 ,-playerSkeleton.transform.forward.z*speed*speedMod);
+            direct = new Vector3(-playerSkeleton.transform.forward.x*speed*speedMod*Time.deltaTime, 0 ,-playerSkeleton.transform.forward.z*speed*speedMod*Time.deltaTime);
             player.transform.position += direct;
         }
     }

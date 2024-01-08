@@ -7,7 +7,6 @@ public class cameraZoom : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.Log(Input.mouseScrollDelta.y);
         Camera mainCam = gameObject.GetComponent<Camera>();
         if(Input.mouseScrollDelta.y < 0) 
         {

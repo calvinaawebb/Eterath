@@ -7,12 +7,10 @@ public class ProceduralTerrainGenOutline : MonoBehaviour
 {
     Mesh mesh;
 
-    Vector3[] vertices;
+    public Vector3[] vertices;
     Vector3 origin;
     int[] triangles;
-
-    public peepee
-
+        
     public string biome;
     public int x = 1;
     public int z = 1;

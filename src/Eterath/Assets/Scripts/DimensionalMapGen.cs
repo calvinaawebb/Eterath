@@ -12,8 +12,8 @@ public class DimensionalMapGen : MonoBehaviour
     int[] triangles;
 
     public string biome;
-    public int xbound = 255;
-    public int zbound = 255;
+    public int xbound = 50;
+    public int zbound = 50;
     public double y;
     public Material color;
 
@@ -25,6 +25,7 @@ public class DimensionalMapGen : MonoBehaviour
     public float scale;
     public float sampleX;
     public float sampleZ;
+    public float resFactor = 2.0f;
     
     public int xSize;
     public int zSize;
@@ -95,7 +96,7 @@ public class DimensionalMapGen : MonoBehaviour
                 // }
                 // Excentuate divits in terrain: y += noiseMap[x,z] * amplitude * (1-noiseMap[x,z]*2);
                 y += noiseMap[x,z] * amplitude; //* (1+noiseMap[x,z]);
-                vertices[i] = new Vector3(x, (float)y, z) + location;
+                vertices[i] = new Vector3(x/resFactor, (float)y/resFactor, z/resFactor) + location;
                 i++;
             }
         }
