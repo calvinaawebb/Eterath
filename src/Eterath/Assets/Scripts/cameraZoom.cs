@@ -8,19 +8,22 @@ public class cameraZoom : MonoBehaviour
     void Update()
     {
         Camera mainCam = gameObject.GetComponent<Camera>();
+        Debug.Log("scroll: " + Input.mouseScrollDelta.y );
         if(Input.mouseScrollDelta.y < 0) 
         {
-            if(mainCam.orthographicSize < 100) 
+            mainCam.transform.position += new Vector3(0, 0, 10);
+            /*if(mainCam.transform.position.z < 0) 
             {
-                mainCam.orthographicSize += 2;
-            }
+                mainCam.transform.position += new Vector3(0, 0, 10);
+            }*/
         } 
-        else if(Input.mouseScrollDelta.y > 0)
+        if(Input.mouseScrollDelta.y > 0)
         {
-            if(mainCam.orthographicSize > 40) 
+            mainCam.transform.position += new Vector3(0, 0,-10);
+            /*if (mainCam.transform.position.z > -300) 
             {
-                mainCam.orthographicSize += -2;
-            }
+                mainCam.transform.position += new Vector3(0,0,-10);
+            }*/
         }
     }
 }

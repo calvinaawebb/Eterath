@@ -1,0 +1,105 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!319 &31900000
+AvatarMask:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: test
+  m_Mask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+  m_Elements:
+  - m_Path: 
+    m_Weight: 1
+  - m_Path: Armature
+    m_Weight: 1
+  - m_Path: Armature/Bone.002
+    m_Weight: 1
+  - m_Path: Armature/Bone.002/Bone.003
+    m_Weight: 1
+  - m_Path: Armature/Bone.002/Bone.003/Bone
+    m_Weight: 1
+  - m_Path: Armature/Bone.002/Bone.003/Bone/Bone.001
+    m_Weight: 1
+  - m_Path: Armature/Bone.002/Bone.003/Bone/Bone.001/Bone.002.L
+    m_Weight: 1
+  - m_Path: Armature/Bone.002/Bone.003/Bone/Bone.001/Bone.002.L/Bone.003.L
+    m_Weight: 1
+  - m_Path: Armature/Bone.002/Bone.003/Bone/Bone.001/Bone.002.L/Bone.003.L/Bone.004.L
+    m_Weight: 1
+  - m_Path: Armature/Bone.002/Bone.003/Bone/Bone.001/Bone.002.L/Bone.003.L/Bone.004.L/Bone.005.R
+    m_Weight: 1
+  - m_Path: Armature/Bone.002/Bone.003/Bone/Bone.001/Bone.002.L/Bone.003.L/Bone.004.L/Bone.005.R/Bone.005.R_end
+    m_Weight: 1
+  - m_Path: Armature/Bone.002/Bone.003/Bone/Bone.001/Bone.002.L/Elbow.Control.L
+    m_Weight: 1
+  - m_Path: Armature/Bone.002/Bone.003/Bone/Bone.001/Bone.002.L/Elbow.Control.L/Elbow.Control.L_end
+    m_Weight: 1
+  - m_Path: Armature/Bone.002/Bone.003/Bone/Bone.001/Bone.002.R
+    m_Weight: 1
+  - m_Path: Armature/Bone.002/Bone.003/Bone/Bone.001/Bone.002.R/Bone.003.R
+    m_Weight: 1
+  - m_Path: Armature/Bone.002/Bone.003/Bone/Bone.001/Bone.002.R/Bone.003.R/Bone.004.R
+    m_Weight: 1
+  - m_Path: Armature/Bone.002/Bone.003/Bone/Bone.001/Bone.002.R/Bone.003.R/Bone.004.R/Bone.005.L
+    m_Weight: 1
+  - m_Path: Armature/Bone.002/Bone.003/Bone/Bone.001/Bone.002.R/Bone.003.R/Bone.004.R/Bone.005.L/Bone.005.L_end
+    m_Weight: 1
+  - m_Path: Armature/Bone.002/Bone.003/Bone/Bone.001/Bone.002.R/Elbow.Control.R
+    m_Weight: 1
+  - m_Path: Armature/Bone.002/Bone.003/Bone/Bone.001/Bone.002.R/Elbow.Control.R/Elbow.Control.R_end
+    m_Weight: 1
+  - m_Path: Armature/Bone.002/Bone.003/Bone/Bone.001/Bone.004
+    m_Weight: 1
+  - m_Path: Armature/Bone.002/Bone.003/Bone/Bone.001/Bone.004/Bone.005
+    m_Weight: 1
+  - m_Path: Armature/Bone.002/Bone.003/Bone/Bone.001/Bone.004/Bone.005/Bone.006
+    m_Weight: 1
+  - m_Path: Armature/Bone.002/Bone.003/Bone/Bone.001/Bone.004/Bone.005/Bone.006/Bone.006_end
+    m_Weight: 1
+  - m_Path: Armature/Bone.002/Bone.003/Bone/Bone.001/Bone.004/Bone.005/Bone.006/Icosphere.023
+    m_Weight: 1
+  - m_Path: Armature/Bone.002/Bone.003/Bone/Bone.001/Icosphere.012
+    m_Weight: 1
+  - m_Path: Armature/Bone.002/Bone.003/Bone/Bone.007.L
+    m_Weight: 1
+  - m_Path: Armature/Bone.002/Bone.003/Bone/Bone.007.L/Bone.008.L
+    m_Weight: 1
+  - m_Path: Armature/Bone.002/Bone.003/Bone/Bone.007.L/Bone.008.L/Bone.009.L
+    m_Weight: 1
+  - m_Path: Armature/Bone.002/Bone.003/Bone/Bone.007.L/Bone.008.L/Bone.009.L/Bone.010.L
+    m_Weight: 1
+  - m_Path: Armature/Bone.002/Bone.003/Bone/Bone.007.L/Bone.008.L/Bone.009.L/Bone.010.L/Bone.010.L_end
+    m_Weight: 1
+  - m_Path: Armature/Bone.002/Bone.003/Bone/Bone.007.R
+    m_Weight: 1
+  - m_Path: Armature/Bone.002/Bone.003/Bone/Bone.007.R/Bone.008.R
+    m_Weight: 1
+  - m_Path: Armature/Bone.002/Bone.003/Bone/Bone.007.R/Bone.008.R/Bone.009.R
+    m_Weight: 1
+  - m_Path: Armature/Bone.002/Bone.003/Bone/Bone.007.R/Bone.008.R/Bone.009.R/Bone.010.R
+    m_Weight: 1
+  - m_Path: Armature/Bone.002/Bone.003/Bone/Bone.007.R/Bone.008.R/Bone.009.R/Bone.010.R/Bone.010.R_end
+    m_Weight: 1
+  - m_Path: Armature/Bone.002/Bone.005.Control.L
+    m_Weight: 1
+  - m_Path: Armature/Bone.002/Bone.005.Control.L/Bone.005.Control.L_end
+    m_Weight: 1
+  - m_Path: Armature/Bone.002/Bone.005.Control.R
+    m_Weight: 1
+  - m_Path: Armature/Bone.002/Bone.005.Control.R/Bone.005.Control.R_end
+    m_Weight: 1
+  - m_Path: Armature/Bone.002/Bone.009.Control.L
+    m_Weight: 1
+  - m_Path: Armature/Bone.002/Bone.009.Control.L/Knee.Control.L
+    m_Weight: 1
+  - m_Path: Armature/Bone.002/Bone.009.Control.L/Knee.Control.L/Knee.Control.L_end
+    m_Weight: 1
+  - m_Path: Armature/Bone.002/Bone.009.Control.R
+    m_Weight: 1
+  - m_Path: Armature/Bone.002/Bone.009.Control.R/Knee.Control.R
+    m_Weight: 1
+  - m_Path: Armature/Bone.002/Bone.009.Control.R/Knee.Control.R/Knee.Control.R_end
+    m_Weight: 1
+  - m_Path: body copy
+    m_Weight: 1

@@ -6,7 +6,11 @@ public class ChunkGen : MonoBehaviour
 {
     public DimensionalMapGen mapref;
     public GameObject chunk;
+    public GameObject tree;
+    public GameObject stoneHenge;
+    public GameObject DLCstoneHenge;
     public int chunkAmount = 9;
+    public Material grass;
     // Start is called before the first frame update
     void Start()
     {
@@ -21,8 +25,29 @@ public class ChunkGen : MonoBehaviour
                 DimensionalMapGen gen = o.GetComponent<DimensionalMapGen>();
                 gen.offset = new Vector2((mapref.xbound*x)/gen.scale, (mapref.zbound*z)/gen.scale);
                 gen.GenDMap();
+                placeObject(0.5f, tree, 10, gen, x, z);
+                placeObject(0.0025f, stoneHenge, 1, gen, x, z);
+                placeObject(0.00025f, DLCstoneHenge, 1, gen, x, z);
+                GameObject p = Instantiate(o, transform);
+                p.GetComponent<MeshRenderer>().material = grass;
             }
         } 
+    }
+
+    void placeObject(float frequency, GameObject objPlace, int amount, DimensionalMapGen gen, int chunkX, int chunkZ) 
+    {
+        // Conditional that decides if the object will spawn based of frequency aka percentage of chunks with this item in it.
+        if (Random.Range(0f, 1f) / frequency <= 1) 
+        {
+            for(int i=0;i<amount;i++) 
+            {
+                GameObject y = Instantiate(objPlace, transform);
+                int randomVert = Random.Range(0, gen.vertices.Length - 1);
+                y.transform.localPosition = gen.vertices[Random.Range(0, gen.vertices.Length)];
+                y.transform.localPosition = new Vector3(((mapref.xbound / mapref.resFactor) * chunkX) + gen.vertices[randomVert].x, gen.vertices[randomVert].y, ((mapref.zbound / mapref.resFactor) * chunkZ) + gen.vertices[randomVert].z);
+                y.transform.eulerAngles = new Vector3(0, Random.Range(-360f, 360f), 0);
+            }
+        }
     }
 
     // Update is called once per frame
