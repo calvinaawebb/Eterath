@@ -1650,7 +1650,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 8a6773ca16521ab44a7f0b0c1d31c47c, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8a6773ca16521ab44a7f0b0c1d31c47c, type: 3}
@@ -2190,7 +2190,7 @@ MonoBehaviour:
   tree: {fileID: 1393932436}
   stoneHenge: {fileID: 919132149155446097, guid: 097c8e81a77bb00499dc2e3f010ec558, type: 3}
   DLCstoneHenge: {fileID: 985534847}
-  chunkAmount: 20
+  chunkAmount: 10
   grass: {fileID: 2100000, guid: ab9ec521fef3c8548811634ff91bdbcf, type: 2}
 --- !u!4 &1403010015
 Transform:
@@ -2884,7 +2884,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: -3033667219593020291, guid: ee5903e83e590f1468595a9978af8cd3, type: 3}
+  - {fileID: 2100000, guid: bd197167b1228eb46a5c5e84477ae6ea, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

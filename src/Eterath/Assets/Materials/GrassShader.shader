@@ -32,7 +32,9 @@ Shader "Unlit/GrassShader"
 		{
 			Tags
 			{
-				"RenderType" = "Opaque"
+				"RenderType" = "Transparent"
+				"SurfaceType" = "Transparent"
+				"BlendingMode" = "Additive"
 				"Queue" = "Geometry"
 				"RenderPipeline" = "UniversalPipeline"
 			}
