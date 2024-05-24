@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class ChunkGen : MonoBehaviour
 {
+    //public ArrayList<GameObject> chunks = new ArrayList<GameObject>();
     public DimensionalMapGen mapref;
     public GameObject chunk;
     public GameObject tree;

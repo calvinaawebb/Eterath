@@ -11,7 +11,7 @@ public class PlayerController : MonoBehaviour
     public Animator playerAnimator;
     public GameObject player;
     public GameObject playerSkeleton;
-    public GameObject torsoBone;
+    //public GameObject torsoBone;
     public float speed;
     public float limit;
     public float turnSpeed;
@@ -33,12 +33,12 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
         // Initalization
-        turnSpeed = 0.75f; //- (Mathf.Abs((Input.GetAxis("Vertical") + Input.GetAxis("Horizontal"))/2)/20);
+        turnSpeed = 0.25f; //- (Mathf.Abs((Input.GetAxis("Vertical") + Input.GetAxis("Horizontal"))/2)/20);
         turnSpeed *= Time.deltaTime*303.1222f;
         Cursor.lockState = CursorLockMode.Locked;
 
         // Setting position and rotation of camera object.
-        transform.position = new Vector3(player.transform.position.x, player.transform.position.y + 2f, player.transform.position.z); 
+        transform.position = new Vector3(playerSkeleton.transform.position.x, playerSkeleton.transform.position.y + 2f, playerSkeleton.transform.position.z); 
         transform.eulerAngles = originalRot;
 
         // Change rotation of camera around player using mouse movement.
@@ -102,86 +102,86 @@ public class PlayerController : MonoBehaviour
         if(d && !(Input.GetKeyDown(KeyCode.W) && Input.GetKeyDown(KeyCode.S))) 
         {
             limit = transform.eulerAngles.y - 90;
-            rotateTo(limit, turnSpeed, player);
+            rotateTo(limit, turnSpeed, playerSkeleton);
         } 
         if(d && w) 
         {
             limit = transform.eulerAngles.y - 135;
-            rotateTo(limit, turnSpeed, player);
+            rotateTo(limit, turnSpeed, playerSkeleton);
         }
         if(a && !(Input.GetKeyDown(KeyCode.W) && Input.GetKeyDown(KeyCode.S))) 
         {
             limit = transform.eulerAngles.y - 270;
-            rotateTo(limit, turnSpeed, player);
+            rotateTo(limit, turnSpeed, playerSkeleton);
         }
         if(a && s) 
         {
             limit = transform.eulerAngles.y - 315;
-            rotateTo(limit, turnSpeed, player);
+            rotateTo(limit, turnSpeed, playerSkeleton);
         }
 
         if(!(Input.GetKeyDown(KeyCode.A) && Input.GetKeyDown(KeyCode.D)) && w) 
         {
             limit = transform.eulerAngles.y - 180;
-            rotateTo(limit, turnSpeed, player);
+            rotateTo(limit, turnSpeed, playerSkeleton);
         } 
         if(!(Input.GetKeyDown(KeyCode.A) && Input.GetKeyDown(KeyCode.D)) && s) 
         {
             limit = transform.eulerAngles.y - 360;
-            rotateTo(limit, turnSpeed, player);
+            rotateTo(limit, turnSpeed, playerSkeleton);
         }
         if(a && w) 
         {
             limit = transform.eulerAngles.y - 225;
-            rotateTo(limit, turnSpeed, player);
+            rotateTo(limit, turnSpeed, playerSkeleton);
         }
         if(d && s) 
         {
             limit = transform.eulerAngles.y - 45;
-            rotateTo(limit, turnSpeed, player);
+            rotateTo(limit, turnSpeed, playerSkeleton);
         }
 
         // Using key inputs to rotate player character.
         if(d && !(Input.GetKeyDown(KeyCode.W) && Input.GetKeyDown(KeyCode.S))) 
         {
             limit = transform.eulerAngles.y - 90;
-            rotateTo(limit, turnSpeed*2, torsoBone);
+            rotateTo(limit, turnSpeed*2, playerSkeleton);
         } 
         if(d && w) 
         {
             limit = transform.eulerAngles.y - 90;
-            rotateTo(limit, turnSpeed*2, torsoBone);
+            rotateTo(limit, turnSpeed*2, playerSkeleton);
         }
         if(a && !(Input.GetKeyDown(KeyCode.W) && Input.GetKeyDown(KeyCode.S))) 
         {
             limit = transform.eulerAngles.y - 270;
-            rotateTo(limit, turnSpeed*2, torsoBone);
+            rotateTo(limit, turnSpeed*2, playerSkeleton);
         }
         if(a && s) 
         {
             limit = transform.eulerAngles.y - 315;
-            rotateTo(limit, turnSpeed*2, torsoBone);
+            rotateTo(limit, turnSpeed*2, playerSkeleton);
         }
 
         if(!(Input.GetKeyDown(KeyCode.A) && Input.GetKeyDown(KeyCode.D)) && w) 
         {
             limit = transform.eulerAngles.y - 180;
-            rotateTo(limit, turnSpeed*2, torsoBone);
+            rotateTo(limit, turnSpeed*2, playerSkeleton);
         } 
         if(!(Input.GetKeyDown(KeyCode.A) && Input.GetKeyDown(KeyCode.D)) && s) 
         {
             limit = transform.eulerAngles.y - 360;
-            rotateTo(limit, turnSpeed*2, torsoBone);
+            rotateTo(limit, turnSpeed*2, playerSkeleton);
         }
         if(a && w) 
         {
             limit = transform.eulerAngles.y - 225;
-            rotateTo(limit, turnSpeed*2, torsoBone);
+            rotateTo(limit, turnSpeed*2, playerSkeleton);
         }
         if(d && s) 
         {
             limit = transform.eulerAngles.y - 45;
-            rotateTo(limit, turnSpeed*2, torsoBone);
+            rotateTo(limit, turnSpeed*2, playerSkeleton);
         }
 
         // Handling player animation based on if the user is inputing.        
