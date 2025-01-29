@@ -24,7 +24,7 @@ Shader "Unlit/GrassShader"
 		_GrassFalloff("Grass Visibility Fade-In Falloff", Range(0, 0.5)) = 0.05
 
 		_WindMap("Wind Offset Map", 2D) = "bump" {}
-		_WindVelocity("Wind Velocity", Vector) = (1, 0, 0, 0)
+		_WindVelocity("Wind Velocity", Vector) = (0, 0, 0, 0)
 		_WindFrequency("Wind Pulse Frequency", Range(0, 1)) = 0.01
 	}
 

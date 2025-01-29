@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: b3aa41722348e514b875dc740a91c4de
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - diamondTrophy: {fileID: 21300000, guid: b98f40b4fd1f61b489930c7608ce0bf2, type: 3}
+  - platinumTrophy: {fileID: 21300000, guid: b6e0ec0079083784e817bb85fc0864f6, type: 3}
+  - goldTrophy: {fileID: 21300000, guid: 0b1e5bbc3fecaf34aaf7463a96421379, type: 3}
+  - silverTrophy: {fileID: 21300000, guid: f4c4b7a67b09050479888b55ed47240e, type: 3}
+  - bronzeTrophy: {fileID: 21300000, guid: d520231ca558d51498e162f73b95e273, type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
